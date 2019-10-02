@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Customer Information</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	
+</head>
+<body>
+
+<h2 style="text-align:center;">Customer Information</h2>
+
+<form id="customerInformationForm" action="" onsubmit="return validateForm()" method="post">
+	<fieldset>
+		<legend>Customer information:</legend>
+		First name:<br>
+		<input type="text" name="firstname">
+		<br><br>
+		Last name:<br>
+		<input type="text" name="lastname">
+		<br><br>
+		Email:<br>
+		<input type="email" name="email">
+		<br><br>
+		<input type="submit" onclick="validateForm" value="Submit">
+	</fieldset>
+</form>
+
+<script>
+function validateForm() {
+  var x = document.forms["customerInformationForm"]["firstname"].value;
+  var y = document.forms["customerInformationForm"]["lastname"].value;
+  var z = document.forms["customerInformationForm"]["email"].value;
+  if (x==null || x=="" || y==null || y=="" || z==null || z=="")
+  {
+    alert("field must be filled out");
+    return false;
+	}
+} 
+</script>
+
+</body>
+</html>
